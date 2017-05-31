@@ -40,6 +40,7 @@
 		<link rel="icon" type="image/png" href="../img/label.png">
 	</head>
 	<body>
+		<a href="../index.php">На главную</a>
 		<form method="post">
 		<p>Логин<br>(8 символов или более):</p>
 		<input type="text" name="login" required>

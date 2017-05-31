@@ -83,7 +83,9 @@
 					<input type="submit" value="Добавить" name="addline"></p>
 				</form>
 				<?php
-					echo '<p>Выбрано: '.$ch.'</p>';
+					if(isset($ch)) {
+						echo '<p>Выбрано: '.$ch.'</p>';
+					}
 				?>
 			</td>
 			<td rowspan="9">
@@ -94,7 +96,9 @@
 					<input type="submit" name="addbanner" value="Разместить">
 				</form>
 				<?php
-					echo '<p>Размещено: '.$str.'</p>';
+					if(isset($str)) {
+						echo '<p>Размещено: '.$str.'</p>';
+					}
 				?>
 			</td>
 			<td rowspan="9">
@@ -107,7 +111,9 @@
 					<p>Выберите документ: <input type="file" name="doc"></p>
 					<input type="submit" name="adddoc" value="Разместить">
 					<?php
-					echo '<p>Размещено: '.$finame.'</p>';
+					if(isset($finame)) {
+						echo '<p>Размещено: '.$finame.'</p>';
+					}	
 					?>
 					<p>Номер <input type="text" name="num_to_del"><input type="submit" name="deldoc" value="Удалить"></p>
 				</form>

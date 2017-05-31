@@ -1,12 +1,6 @@
 <?php
-	session_start();
-	if(isset($_SESSION['login'])) $jingle=$_SESSION['login'];
-	else $jingle="гость";
-	if (isset($_SESSION['count'])==false)
-	{
-	$_SESSION['count']=0;
-	}
-	$_SESSION['category']='/index';
+	require('./php/header.php');
+	$_SESSION['category']='../index';
 ?>
 
 <!DOCTYPE html>

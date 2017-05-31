@@ -1,11 +1,5 @@
 <?php
-	session_start();
-	if(isset($_SESSION['login'])) $jingle=$_SESSION['login'];
-	else $jingle="гость";
-	if (isset($_SESSION['count'])==false)
-	{
-	$_SESSION['count']=0;
-	}
+	require('../php/header.php');
 	$_SESSION['category']='info';
 ?>
 
@@ -19,23 +13,7 @@
 	<body>
 		<table border = 2  width = "100%" height = "500">
 			<tr class = headline  height = "5%">
-			<td align="center">
-				<?php
-					echo '
-						<font size="4">
-						<a href="../php/cart.php">Корзина: ', $_SESSION['count'], '</a>
-						</font>
-						';
-				?>
-				</td>
-				<td colspan ="1" align = "center" valign = "middle">
-					<p><a href = "../index.php"><img src = "../img/label.png" width = "50" height = "50"></a></p>
-					<font size = 6>Major Shop</font>
-				</td>
-				<td colspan="3">
-					<p align="center"><?php echo "<p align='center' style='font-size:20px; color:red'>Добро пожаловать, ".$jingle."!</p>";?></p>
-					<form action="../php/exit.php" align="right"><input type="submit" value="Выход"></form>
-				</td>
+			<?php require('../php/face.php'); ?>
 			</tr>
 			<tr>
 				<td width = "20%" valign = "top">

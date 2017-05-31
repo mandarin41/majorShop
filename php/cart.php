@@ -2,7 +2,7 @@
 	session_start();
 	echo 
 		'<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<a href="'.$_SESSION['category'].'.php">Назад к выбору</a>
+		<a href="'.$_SESSION['category'].'.php">Назад</a>
 		<table  width="90%" align="center" border="1">';
     for ($i=0; $i<$_SESSION['count']; $i++)
 	{

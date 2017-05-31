@@ -1,7 +1,5 @@
 <?php
-	session_start();
-	if(isset($_SESSION['login'])) $jingle=$_SESSION['login'];
-	else $jingle="гость";
+	require('../php/header.php');
 ?>
 
 <!DOCTYPE html>
@@ -24,14 +22,7 @@
 			<td>
 				<p align = "right"><img src = "../img/soad.jpg" width = "590" height = "250" align = "center" usemap = "#map" alt = "System Of A Down"></p>
 			</td>
-			<td align = "center" width = "30%">
-				<p align = "center"><a href = "../index.php"><img src = "../img/label.png" width = "50" height = "50"></a></p>
-				<font size = 5>Major Shop</font>
-			</td>
-			<td colspan="3">
-				<p align="right"><?php echo "<p align='right' style='font-size:20px; color:red'>Добро пожаловать, ".$jingle."!</p>";?></p>
-				<form action="../php/exit.php" align="right"><input type="submit" value="Выход"></form>
-			</td>
+			<?php require('../php/face.php'); ?>
 		</tr>
 	</table>
 	<hr>
